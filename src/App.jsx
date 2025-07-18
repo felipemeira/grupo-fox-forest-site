@@ -84,7 +84,33 @@ const App = () => {
       events: [
         { year: '2017-2020', event: 'UHE Sinop, Mineração Ipê, Gerdau, Duratex', description: 'Diversificação de clientes industriais' },
         { year: '2021-2023', event: 'LT Janaúba Pirapora, Colheita Florestal Semi-Mecanizada', description: 'Entrada no setor de transmissão' },
-        { year: '2024-2025', event: 'LT Vale do Itajaí, LT Morro do Chapéu - Neoenergia', description: 'Expansão nacional continuada' }
+        { year: '2024-2023', event: 'Mineração Ipê, Canadian, UFV Lavras', description: 'Expansão nacional continuada' }
+      ],
+      activities: ['Supressão de Vegetação', 'Colheita Florestal', 'PRAD (Programa de Recuperação de Áreas Degradadas)'],
+      image: serviceImage1,
+      stats: { projects: '25+', clients: '15+', areas: '5.000+ ha' }
+    },
+    {
+      period: '2024',
+      title: 'Ampliação do portfólio com novos serviços especializados',
+      description: 'Entrada em novos segmentos e diversificação de clientes',
+      events: [
+        { year: '2014', event: 'PCH Senhora do Porto, PCH Dores de Guanhães', description: 'Entrada no segmento de PCHs' },
+        { year: '2015', event: 'PCH Jacaré, UHE Belo Monte', description: 'Participação no maior projeto hidrelétrico brasileiro' },
+        { year: '2016', event: 'VIA 040, Mineração Vale', description: 'Diversificação para rodovias e mineração' }
+      ],
+      activities: ['Supressão Vegetal', 'Roçada Pesada', 'Destocamento', 'Revegetação', 'Hidrossemeadura'],
+      image: serviceImage4,
+      stats: { projects: '12', clients: '8', areas: '2.000 ha' }
+    },
+    {
+      period: '2025',
+      title: 'Projetos Recentes e Atuais',
+      description: 'Consolidação como referência nacional em soluções sustentáveis',
+      events: [
+        { year: '2017-2020', event: 'UHE Sinop, Mineração Ipê, Gerdau, Duratex', description: 'Diversificação de clientes industriais' },
+        { year: '2021-2023', event: 'LT Janaúba Pirapora, Colheita Florestal Semi-Mecanizada', description: 'Entrada no setor de transmissão' },
+        { year: '2024-2023', event: 'Mineração Ipê, Canadian, UFV Lavras', description: 'Expansão nacional continuada' }
       ],
       activities: ['Supressão de Vegetação', 'Colheita Florestal', 'PRAD (Programa de Recuperação de Áreas Degradadas)'],
       image: serviceImage1,
@@ -95,19 +121,16 @@ const App = () => {
   const services = {
     infrastructure: [
       { name: 'Recuperação de Estradas', icon: '🛣️', image: serviceImage2 },
-      { name: 'Construção de Escolas', icon: '🏫', image: serviceImage5 },
-      { name: 'Sistemas de Abastecimento de Água', icon: '💧', image: serviceImage6 },
       { name: 'Retaludamento', icon: '⛰️', image: serviceImage3 },
       { name: 'Hidrossemeadura', icon: '🌱', image: serviceImage4 },
       { name: 'Aplicação de Biomanta', icon: '🍃', image: serviceImage5 }
     ],
     forestry: [
-      { name: 'Supressão Vegetal', icon: '🌳', image: serviceImage1 },
-      { name: 'Supressão Vegetal com Rappel', icon: '🧗', image: serviceImage3 },
-      { name: 'Corte e Traçamento', icon: '🪓', image: serviceImage4 },
-      { name: 'Baldeio e Transporte', icon: '🚛', image: serviceImage5 },
+      { name: 'Supressão Vegetal Semimecanizada', icon: '🌳', image: serviceImage1 },
+      { name: 'Supressão Vegetal Mecanizada', icon: '🚜', image: serviceImage3 },
+      { name: 'Transporte Florestal', icon: '🛻', image: serviceImage4 },
       { name: 'Colheita Florestal', icon: '🌲', image: serviceImage1 },
-      { name: 'Mineração', icon: '⛏️', image: serviceImage6 }
+      { name: 'PRAD', icon: '🌳', image: serviceImage6 }
     ]
   };
 
@@ -280,21 +303,7 @@ const App = () => {
                         <h3 className="text-2xl font-bold text-[#453E17] mb-3">{period.title}</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed">{period.description}</p>
                         
-                        {/* Stats */}
-                        <div className="grid grid-cols-3 gap-4 mb-6">
-                          <div className="text-center p-3 bg-[#9CA856]/10 rounded-lg">
-                            <div className="text-2xl font-bold text-[#453E17]">{period.stats.projects}</div>
-                            <div className="text-xs text-gray-600">Projetos</div>
-                          </div>
-                          <div className="text-center p-3 bg-[#9CA856]/10 rounded-lg">
-                            <div className="text-2xl font-bold text-[#453E17]">{period.stats.clients}</div>
-                            <div className="text-xs text-gray-600">Clientes</div>
-                          </div>
-                          <div className="text-center p-3 bg-[#9CA856]/10 rounded-lg">
-                            <div className="text-2xl font-bold text-[#453E17]">{period.stats.areas}</div>
-                            <div className="text-xs text-gray-600">Área</div>
-                          </div>
-                        </div>
+
                         
                         {/* Key Events */}
                         <div className="space-y-3">
@@ -358,23 +367,31 @@ const App = () => {
           <div className="mt-20 text-center">
             <div className="bg-gradient-to-r from-[#453E17] to-[#9CA856] text-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
               <h3 className="text-3xl font-bold mb-4">20+ Anos de Excelência</h3>
-              <p className="text-lg mb-6">Uma trajetória de crescimento sustentável e inovação constante</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <p className="text-lg mb-6">Uma trajetória de soluções para infraestrutura de energia, mineração, construção e siderurgia</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">50+</div>
+                  <div className="text-3xl font-bold">22+</div>
                   <div className="text-sm opacity-90">Projetos Realizados</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold">30+</div>
+                  <div className="text-3xl font-bold">20+</div>
                   <div className="text-sm opacity-90">Clientes Atendidos</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold">10.000+</div>
-                  <div className="text-sm opacity-90">Hectares Trabalhados</div>
+                  <div className="text-3xl font-bold">13</div>
+                  <div className="text-sm opacity-90">Estados</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold">15</div>
-                  <div className="text-sm opacity-90">Estados Brasileiros</div>
+                  <div className="text-3xl font-bold">520</div>
+                  <div className="text-sm opacity-90">PRAD</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold">2.790.000m³</div>
+                  <div className="text-sm opacity-90">Colheira Florestal</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold">11.197</div>
+                  <div className="text-sm opacity-90">Hectares Trabalhados</div>
                 </div>
               </div>
             </div>
