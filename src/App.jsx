@@ -3,28 +3,49 @@ import './App.css';
 import { ChevronDown, ChevronUp, Building, Leaf, Users, Award, Target, Eye, Heart, TrendingUp, CheckCircle, Phone, Mail, Globe, Calendar, MapPin } from 'lucide-react';
 
 // Importando imagens
+// Logomarcas
 import logoImage from './assets/image_0.png';
 import grupoFoxLogo from './assets/grupofox.png';
 import forestLogo from './assets/forest.png';
 import foxLogLogo from './assets/foxlog.png';
 
+// Imagens de serviços
 import serviceImage1 from './assets/image_12.png'; // Maquinário florestal
 import serviceImage2 from './assets/image_15.png'; // Infraestrutura
 import serviceImage3 from './assets/image_18.png'; // Projetos
 import serviceImage4 from './assets/image_22.png'; // Operações
 import serviceImage5 from './assets/image_25.png'; // Equipamentos
 import serviceImage6 from './assets/image_28.png'; // Trabalhos
+import serviceImage7 from './assets/image_4.png'; // Retaludamento
+import serviceImage8 from './assets/image_8.png'; // Foto aeria
+import serviceImage9 from './assets/image_13.png'; // Foto aeria
+import serviceImage10 from './assets/image_21.png'; // Forwarder
+import serviceImage11 from './assets/image_26.png'; // Forwarder
 
 // Logos de clientes
+
 import clientLogo1 from './assets/image_60.png'; // Guanhães Energia
 import clientLogo2 from './assets/image_64.png'; // Suzano
 import clientLogo3 from './assets/image_77.png'; // IPÊ Mineração
-import clientLogo4 from './assets/image_61.png'; // Outro cliente
-import clientLogo5 from './assets/image_62.png'; // Outro cliente
-import clientLogo6 from './assets/image_63.png'; // Outro cliente
-import clientLogo7 from './assets/image_65.png'; // Outro cliente
-import clientLogo8 from './assets/image_66.png'; // Outro cliente
-import clientLogo9 from './assets/image_67.png'; // Outro cliente
+import clientLogo4 from './assets/image_61.png'; // Norte Energia
+import clientLogo5 from './assets/image_62.png'; // CEMIG
+import clientLogo6 from './assets/image_63.png'; // ESBR
+import clientLogo7 from './assets/image_65.png'; // GUSA
+import clientLogo8 from './assets/image_66.png'; // Via 040
+import clientLogo9 from './assets/image_67.png'; // U&M
+import clientLogo10 from './assets/image_70.png'; // CPFL
+import clientLogo11 from './assets/image_73.png'; // SINOP
+import clientLogo12 from './assets/image_57.png'; // Santo Antônio
+import clientLogo13 from './assets/image_58.png'; // Furnas
+import clientLogo14 from './assets/image_59.png'; // Sefac
+import clientLogo15 from './assets/image_76.png'; // CanadianSolar
+import clientLogo16 from './assets/image_74.png'; // Gerdau
+import clientLogo17 from './assets/image_78.png'; // Acelor
+import clientLogo18 from './assets/image_75.png'; // Duratex
+import clientLogo19 from './assets/image_69.png'; // Plantar
+import clientLogo20 from './assets/image_72.png'; // Egir
+import clientLogo21 from './assets/image_71.png'; // Biocarbono
+import clientLogo22 from './assets/image_68.png'; // Viena
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -40,7 +61,7 @@ const App = () => {
   const timelineData = [
     {
       period: '2004-2006',
-      title: 'Projetos, Clientes e Quantidades',
+      title: 'Projetos',
       description: 'Início das atividades com foco em infraestrutura e recuperação ambiental',
       events: [
         { year: '2004', event: 'Fundação da Empresa', description: 'Início das operações com visão sustentável' },
@@ -48,7 +69,7 @@ const App = () => {
         { year: '2006', event: 'UHE Peixe', description: 'Consolidação no setor energético' }
       ],
       activities: ['Abertura e Recuperação de Acesso', 'Construção de Escolas', 'Sistemas de Abastecimento de Água', 'Mecanização Agrícola', 'Contenção de Encosta', 'Supressão Vegetal'],
-      image: serviceImage2,
+      image: serviceImage7,
       stats: { projects: '3', clients: '2', areas: '500 ha' }
     },
     {
@@ -61,7 +82,7 @@ const App = () => {
         { year: '2013', event: 'UHE Jirau', description: 'Consolidação na região Norte' }
       ],
       activities: ['Supressão Vegetal Semimecanizada', 'Supressão Vegetal Mecanizada', 'Corte e Traçamento', 'Baldeio e Transporte', 'Empilhamento e Destinação de Resíduo'],
-      image: serviceImage3,
+      image: serviceImage8,
       stats: { projects: '8', clients: '5', areas: '1.200 ha' }
     },
     {
@@ -74,7 +95,7 @@ const App = () => {
         { year: '2016', event: 'VIA 040, Mineração Vale', description: 'Diversificação para rodovias e mineração' }
       ],
       activities: ['Supressão Vegetal', 'Roçada Pesada', 'Destocamento', 'Revegetação', 'Hidrossemeadura'],
-      image: serviceImage4,
+      image: serviceImage9,
       stats: { projects: '12', clients: '8', areas: '2.000 ha' }
     },
     {
@@ -86,8 +107,8 @@ const App = () => {
         { year: '2021-2023', event: 'LT Janaúba Pirapora, Colheita Florestal Semi-Mecanizada', description: 'Entrada no setor de transmissão' },
         { year: '2024-2023', event: 'Mineração Ipê, Canadian, UFV Lavras', description: 'Expansão nacional continuada' }
       ],
-      activities: ['Supressão de Vegetação', 'Colheita Florestal', 'PRAD (Programa de Recuperação de Áreas Degradadas)'],
-      image: serviceImage1,
+      activities: ['Supressão de Vegetação', 'Destocamento', 'Colheita Florestal'],
+      image: serviceImage3,
       stats: { projects: '25+', clients: '15+', areas: '5.000+ ha' }
     },
     {
@@ -95,12 +116,12 @@ const App = () => {
       title: 'Ampliação do portfólio com novos serviços especializados',
       description: 'Entrada em novos segmentos e diversificação de clientes',
       events: [
-        { year: '2014', event: 'PCH Senhora do Porto, PCH Dores de Guanhães', description: 'Entrada no segmento de PCHs' },
-        { year: '2015', event: 'PCH Jacaré, UHE Belo Monte', description: 'Participação no maior projeto hidrelétrico brasileiro' },
-        { year: '2016', event: 'VIA 040, Mineração Vale', description: 'Diversificação para rodovias e mineração' }
+        { year: '2024', event: 'NeoEnergia - LT Vale do Itajai', description: 'XXX' },
+        { year: '2024', event: 'Siderurgicas', description: 'XXX' },
+        { year: '2024', event: 'VIA 040, Mineração Vale', description: 'Diversificação para rodovias e mineração' }
       ],
-      activities: ['Supressão Vegetal', 'Roçada Pesada', 'Destocamento', 'Revegetação', 'Hidrossemeadura'],
-      image: serviceImage4,
+      activities: ['Supressão Vegetal', 'Destocamento'],
+      image: serviceImage10,
       stats: { projects: '12', clients: '8', areas: '2.000 ha' }
     },
     {
@@ -108,12 +129,11 @@ const App = () => {
       title: 'Projetos Recentes e Atuais',
       description: 'Consolidação como referência nacional em soluções sustentáveis',
       events: [
-        { year: '2017-2020', event: 'UHE Sinop, Mineração Ipê, Gerdau, Duratex', description: 'Diversificação de clientes industriais' },
-        { year: '2021-2023', event: 'LT Janaúba Pirapora, Colheita Florestal Semi-Mecanizada', description: 'Entrada no setor de transmissão' },
-        { year: '2024-2023', event: 'Mineração Ipê, Canadian, UFV Lavras', description: 'Expansão nacional continuada' }
+        { year: 'Atual', event: 'NeoEnergia - LT Vale do Itajai', description: 'XX' },
+        { year: 'Atual', event: 'Mineração Ipê, Canadian, UFV Lavras', description: 'Expansão nacional continuada' }
       ],
-      activities: ['Supressão de Vegetação', 'Colheita Florestal', 'PRAD (Programa de Recuperação de Áreas Degradadas)'],
-      image: serviceImage1,
+      activities: ['Supressão de Vegetação', 'Destocamento', 'PRAD'],
+      image: serviceImage11,
       stats: { projects: '25+', clients: '15+', areas: '5.000+ ha' }
     }
   ];
@@ -135,15 +155,30 @@ const App = () => {
   };
 
   const clients = [
+    { name: 'CEMIG', logo: clientLogo5 },
     { name: 'Guanhães Energia', logo: clientLogo1 },
+    { name: 'CPFL', logo: clientLogo10 },
+    { name: 'Sinop Energia', logo: clientLogo11 },
+    { name: 'Norte Energia', logo: clientLogo4 },
+    { name: 'Furnas', logo: clientLogo13 },
+    { name: 'CanadianSolar', logo: clientLogo15 },
+    { name: 'Sefac', logo: clientLogo14 },
+    { name: 'Santo Antônio Energia', logo: clientLogo12 },
+    { name: 'ESBR', logo: clientLogo6 },
+    { name: 'U&M', logo: clientLogo9 },
+    { name: 'Gerdau', logo: clientLogo16 },
+    { name: 'BioFlorestas', logo: clientLogo17 },
+    { name: 'Ipê Mineração', logo: clientLogo3 },
+    { name: 'Duratex', logo: clientLogo18 },
+    { name: 'Gusa', logo: clientLogo7 },
     { name: 'Suzano', logo: clientLogo2 },
-    { name: 'IPÊ Mineração', logo: clientLogo3 },
-    { name: 'Vale', logo: clientLogo4 },
-    { name: 'Neoenergia', logo: clientLogo5 },
-    { name: 'Gerdau', logo: clientLogo6 },
-    { name: 'Duratex', logo: clientLogo7 },
     { name: 'Via 040', logo: clientLogo8 },
-    { name: 'UHE Belo Monte', logo: clientLogo9 }
+    { name: 'Plantar', logo: clientLogo19 },
+    { name: 'Egir', logo: clientLogo20 },
+    { name: 'Biocarbono', logo: clientLogo21 },
+    { name: 'Viena', logo: clientLogo22 },
+
+
   ];
 
   const values = [
@@ -329,7 +364,7 @@ const App = () => {
                     {/* Image */}
                     <div className="md:w-2/12 flex justify-center">
                       <div className="relative group">
-                        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-lg border-4 border-[#9CA856] group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg border-4 border-[#9CA856] group-hover:scale-110 transition-transform duration-300">
                           <img 
                             src={period.image} 
                             alt={`Projeto ${period.period}`}
@@ -390,8 +425,8 @@ const App = () => {
                   <div className="text-sm opacity-90">Colheira Florestal</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold">11.197</div>
-                  <div className="text-sm opacity-90">Hectares Trabalhados</div>
+                  <div className="text-3xl font-bold">11.197 ha</div>
+                  <div className="text-sm opacity-90">Trabalhados</div>
                 </div>
               </div>
             </div>
@@ -473,11 +508,11 @@ const App = () => {
             <p className="text-xl text-gray-600">Principais parceiros e clientes que confiam em nosso trabalho</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
             {clients.map((client, index) => (
               <div key={index} className="group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-[#9CA856]">
                 <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 mb-4 flex items-center justify-center">
+                  <div className="w-20 h-10 mb-4 flex items-center justify-center">
                     <img 
                       src={client.logo} 
                       alt={client.name}
@@ -512,7 +547,7 @@ const App = () => {
             <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-6 rounded-lg">
               <Globe className="w-12 h-12 mb-4 text-[#9CA856]" />
               <h3 className="text-lg font-bold mb-2">Website</h3>
-              <p>www.grupofoxforest.com.br</p>
+              <p>www.forest.srv.br</p>
             </div>
             
             <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-6 rounded-lg">
