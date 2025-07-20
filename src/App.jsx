@@ -8,6 +8,7 @@ import logoImage from './assets/image_0.png';
 import grupoFoxLogo from './assets/grupofox.png';
 import forestLogo from './assets/forest.png';
 import foxLogLogo from './assets/foxlog.png';
+import backgroundImage from './assets/image_88.png';
 
 // Imagens de serviços
 import serviceImage1 from './assets/image_12.png'; // Maquinário florestal
@@ -21,6 +22,22 @@ import serviceImage8 from './assets/image_8.png'; // Foto aeria
 import serviceImage9 from './assets/image_13.png'; // Foto aeria
 import serviceImage10 from './assets/image_21.png'; // Forwarder
 import serviceImage11 from './assets/image_26.png'; // Forwarder
+import serviceImage12 from './assets/image_31.png'; // Forwarder
+import serviceImage13 from './assets/image_16.png'; // Forwarder
+import serviceImage14 from './assets/image_81.png'; // Forwarder
+import serviceImage15 from './assets/image_91.png'; // Forwarder
+
+import slide_1 from './assets/image_79.png';
+import slide_2 from './assets/image_80.png';
+import slide_3 from './assets/image_81.png';
+import slide_4 from './assets/image_82.png';
+import slide_5 from './assets/image_83.png';
+import slide_6 from './assets/image_84.png';
+import slide_7 from './assets/image_85.png';
+import slide_8 from './assets/image_86.png';
+import slide_9 from './assets/image_87.png';
+import slide_10 from './assets/image_89.png';
+
 
 // Logos de clientes
 
@@ -46,6 +63,7 @@ import clientLogo19 from './assets/image_69.png'; // Plantar
 import clientLogo20 from './assets/image_72.png'; // Egir
 import clientLogo21 from './assets/image_71.png'; // Biocarbono
 import clientLogo22 from './assets/image_68.png'; // Viena
+import clientLogo23 from './assets/image_90.png'; // Viena
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -61,96 +79,98 @@ const App = () => {
   const timelineData = [
     {
       period: '2004-2006',
-      title: 'Projetos',
-      description: 'Início das atividades com foco em infraestrutura e recuperação ambiental',
+      title: 'Obras',
+      
       events: [
         { year: '2004', event: 'Fundação da Empresa', description: 'Início das operações com visão sustentável' },
-        { year: '2005', event: 'UHE Irapé', description: 'Primeiro grande projeto em usina hidrelétrica' },
+        { year: '2005', event: 'UHE Irapé', description: 'Primeiro projeto em usina hidrelétrica' },
         { year: '2006', event: 'UHE Peixe', description: 'Consolidação no setor energético' }
       ],
-      activities: ['Abertura e Recuperação de Acesso', 'Construção de Escolas', 'Sistemas de Abastecimento de Água', 'Mecanização Agrícola', 'Contenção de Encosta', 'Supressão Vegetal'],
-      image: serviceImage7,
+      activities: ['Abertura e Recuperação de Acesso', 'Mecanização Agrícola', 'Contenção de Encosta', 'Supressão Vegetal'],
+      image: slide_1,
       stats: { projects: '3', clients: '2', areas: '500 ha' }
     },
     {
       period: '2009-2013',
-      title: 'Crescimento significativo com projetos de grande porte',
-      description: 'Expansão para novos estados e participação em megaprojetos',
+      title: 'Obras',
+
       events: [
-        { year: '2009', event: 'UHE Serra do Facão', description: 'Expansão para novos estados' },
-        { year: '2010', event: 'UHE Santo Antônio', description: 'Participação em megaprojeto amazônico' },
-        { year: '2013', event: 'UHE Jirau', description: 'Consolidação na região Norte' }
+        { year: '2009', event: 'UHE Serra do Facão', description: 'Supressão Vegetal' },
+        { year: '2010', event: 'UHE Santo Antônio', description: 'Supressão Vegetal' },
+        { year: '2013', event: 'UHE Jirau', description: 'Supressão Vegetal' }
       ],
-      activities: ['Supressão Vegetal Semimecanizada', 'Supressão Vegetal Mecanizada', 'Corte e Traçamento', 'Baldeio e Transporte', 'Empilhamento e Destinação de Resíduo'],
-      image: serviceImage8,
+      activities: ['Supressão Vegetal Semimecanizada', 'Supressão Vegetal Mecanizada'],
+      image: slide_2,
       stats: { projects: '8', clients: '5', areas: '1.200 ha' }
     },
     {
       period: '2014-2016',
-      title: 'Ampliação do portfólio com novos serviços especializados',
-      description: 'Entrada em novos segmentos e diversificação de clientes',
+      title: 'Obras',
+
       events: [
-        { year: '2014', event: 'PCH Senhora do Porto, PCH Dores de Guanhães', description: 'Entrada no segmento de PCHs' },
-        { year: '2015', event: 'PCH Jacaré, UHE Belo Monte', description: 'Participação no maior projeto hidrelétrico brasileiro' },
-        { year: '2016', event: 'VIA 040, Mineração Vale', description: 'Diversificação para rodovias e mineração' }
+        { year: '2014', event: 'PCH Senhora do Porto, PCH Dores de Guanhães', description: 'Supressão Vegetal' },
+        { year: '2015', event: 'PCH Jacaré, UHE Belo Monte', description: 'Supressão Vegetal' },
+        { year: '2016', event: 'VIA 040, Vale Fertilizantes', description: 'Supressão Vegetal, PRAD' }
       ],
-      activities: ['Supressão Vegetal', 'Roçada Pesada', 'Destocamento', 'Revegetação', 'Hidrossemeadura'],
+      activities: ['Supressão Vegetal', 'Destocamento', 'Revegetação'],
       image: serviceImage9,
       stats: { projects: '12', clients: '8', areas: '2.000 ha' }
     },
     {
       period: '2017-2023',
-      title: 'Projetos Recentes e Atuais',
-      description: 'Consolidação como referência nacional em soluções sustentáveis',
+      title: 'Obras',
+      
       events: [
-        { year: '2017-2020', event: 'UHE Sinop, Mineração Ipê, Gerdau, Duratex', description: 'Diversificação de clientes industriais' },
-        { year: '2021-2023', event: 'LT Janaúba Pirapora, Colheita Florestal Semi-Mecanizada', description: 'Entrada no setor de transmissão' },
-        { year: '2024-2023', event: 'Mineração Ipê, Canadian, UFV Lavras', description: 'Expansão nacional continuada' }
+        { year: '2017-2020', event: 'UHE Sinop, Mineração Ipê, Gerdau, Duratex', description: 'Supressão Vegetal, Colheita Florestal' },
+        { year: '2021-2022', event: 'LT Janaúba Pirapora, PPF Acelor Mittal', description: 'Supressão Vegetal, Colheita Florestal Semimecanizada' },
+        { year: '2022-2023', event: 'Mineração Ipê, UFV Lavras', description: 'Supressão Vegetal' }
       ],
       activities: ['Supressão de Vegetação', 'Destocamento', 'Colheita Florestal'],
-      image: serviceImage3,
+      image: slide_4,
       stats: { projects: '25+', clients: '15+', areas: '5.000+ ha' }
     },
     {
       period: '2024',
-      title: 'Ampliação do portfólio com novos serviços especializados',
-      description: 'Entrada em novos segmentos e diversificação de clientes',
+      title: 'Obras',
+
       events: [
-        { year: '2024', event: 'NeoEnergia - LT Vale do Itajai', description: 'XXX' },
-        { year: '2024', event: 'Siderurgicas', description: 'XXX' },
-        { year: '2024', event: 'VIA 040, Mineração Vale', description: 'Diversificação para rodovias e mineração' }
+        { year: '2024', event: 'Neoenergia - LT Vale do Itajai', description: 'Supressão Vegetal' },
+        { year: '2024', event: 'Siderurgicas', description: 'Colheita Florestal, Destocamento' },
+        
       ],
       activities: ['Supressão Vegetal', 'Destocamento'],
-      image: serviceImage10,
+      image: slide_5,
       stats: { projects: '12', clients: '8', areas: '2.000 ha' }
     },
     {
       period: '2025',
-      title: 'Projetos Recentes e Atuais',
-      description: 'Consolidação como referência nacional em soluções sustentáveis',
+      title: 'Obras',
+      
       events: [
-        { year: 'Atual', event: 'NeoEnergia - LT Vale do Itajai', description: 'XX' },
-        { year: 'Atual', event: 'Mineração Ipê, Canadian, UFV Lavras', description: 'Expansão nacional continuada' }
+        { year: 'Atual', event: 'Neoenergia - LT Vale do Itajai', description: 'Supressão Vegetal' },
+        { year: 'Atual', event: 'Neoenergia - LT Morro do Chapéu', description: 'PRAD, Recuperação de Acessos' },
+        { year: 'Atual', event: 'Siderúrgicas', description: 'Colheita Florestal, Destocamento' }
       ],
       activities: ['Supressão de Vegetação', 'Destocamento', 'PRAD'],
-      image: serviceImage11,
+      image: slide_6,
       stats: { projects: '25+', clients: '15+', areas: '5.000+ ha' }
     }
   ];
 
   const services = {
     infrastructure: [
-      { name: 'Recuperação de Estradas', icon: '🛣️', image: serviceImage2 },
-      { name: 'Retaludamento', icon: '⛰️', image: serviceImage3 },
-      { name: 'Hidrossemeadura', icon: '🌱', image: serviceImage4 },
-      { name: 'Aplicação de Biomanta', icon: '🍃', image: serviceImage5 }
+      { name: 'Terraplenagem', image: serviceImage15 },
+      { name: 'Abertura e Recuperação de Acessos', image: slide_7 },
+      { name: 'PRAD', image: serviceImage14 },
+      { name: 'Retaludamento', image: slide_9 },
+
     ],
     forestry: [
-      { name: 'Supressão Vegetal Semimecanizada', icon: '🌳', image: serviceImage1 },
-      { name: 'Supressão Vegetal Mecanizada', icon: '🚜', image: serviceImage3 },
-      { name: 'Transporte Florestal', icon: '🛻', image: serviceImage4 },
-      { name: 'Colheita Florestal', icon: '🌲', image: serviceImage1 },
-      { name: 'PRAD', icon: '🌳', image: serviceImage6 }
+      { name: 'Supressão Vegetal Semimecanizada', image: serviceImage4 },
+      { name: 'Supressão Vegetal Mecanizada', image: slide_10 },
+      { name: 'Transporte Florestal',  image: serviceImage12 },
+      { name: 'Colheita Florestal',  image: serviceImage13 }
+      
     ]
   };
 
@@ -177,6 +197,8 @@ const App = () => {
     { name: 'Egir', logo: clientLogo20 },
     { name: 'Biocarbono', logo: clientLogo21 },
     { name: 'Viena', logo: clientLogo22 },
+    { name: 'Neoenergia', logo: clientLogo23 },
+
 
 
   ];
@@ -227,22 +249,31 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#453E17] via-[#9CA856] to-[#453E17]">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <section 
+        id="home" 
+        className="relative h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/1"></div>
         <div className="relative z-10 text-center text-white px-4">
           {/* Logos lado a lado */}
           <div className="flex justify-center items-center gap-8 mb-8">
-            <img src={forestLogo} alt="Forest" className="h-24 w-auto filter drop-shadow-lg" />
-            <img src={foxLogLogo} alt="Fox Log" className="h-24 w-auto filter drop-shadow-lg" />
+            <img src={forestLogo} alt="Forest" className="h-30 w-auto filter drop-shadow-lg ml-30" />
+            <img src={foxLogLogo} alt="Fox Log" className="h-30 w-auto filter drop-shadow-lg" />
           </div>
           
 
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">
-            Soluções Sustentáveis para Infraestrutura com Rentabilidade, Qualidade e Desenvolvimento Humano
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow ml-30">
+            Soluções Sustentáveis para Infraestrutura
           </p>
           <button
             onClick={() => scrollToSection('about')}
-            className="bg-[#9CA856] hover:bg-[#453E17] text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-[#9CA856] hover:bg-[#453E17] text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ml-30"
           >
             Conheça Nossa História
           </button>
@@ -364,7 +395,7 @@ const App = () => {
                     {/* Image */}
                     <div className="md:w-2/12 flex justify-center">
                       <div className="relative group">
-                        <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg border-4 border-[#9CA856] group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden shadow-lg border-4 border-[#9CA856] group-hover:scale-110 transition-transform duration-300">
                           <img 
                             src={period.image} 
                             alt={`Projeto ${period.period}`}
@@ -426,7 +457,7 @@ const App = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold">11.197 ha</div>
-                  <div className="text-sm opacity-90">Trabalhados</div>
+                  <div className="text-sm opacity-90">Supressão Vegetal</div>
                 </div>
               </div>
             </div>
@@ -454,7 +485,7 @@ const App = () => {
               <div className="grid grid-cols-1 gap-4">
                 {services.infrastructure.map((service, index) => (
                   <div key={index} className="group flex items-center p-4 bg-gray-50 rounded-lg hover:bg-[#9CA856]/10 transition-colors">
-                    <div className="w-16 h-16 rounded-lg overflow-hidden mr-4 flex-shrink-0">
+                    <div className="w-30 h-30 rounded-lg overflow-hidden mr-2 flex-shrink-0">
                       <img 
                         src={service.image} 
                         alt={service.name}
@@ -480,7 +511,7 @@ const App = () => {
               <div className="grid grid-cols-1 gap-4">
                 {services.forestry.map((service, index) => (
                   <div key={index} className="group flex items-center p-4 bg-gray-50 rounded-lg hover:bg-[#453E17]/10 transition-colors">
-                    <div className="w-16 h-16 rounded-lg overflow-hidden mr-4 flex-shrink-0">
+                    <div className="w-30 h-30 rounded-lg overflow-hidden mr-4 flex-shrink-0">
                       <img 
                         src={service.image} 
                         alt={service.name}
@@ -540,7 +571,7 @@ const App = () => {
           <img src={grupoFoxLogo} alt="Grupo Fox" className="mx-auto mb-8 h-24 w-auto filter drop-shadow-lg" />
           <h2 className="text-4xl font-bold mb-8">Entre em Contato</h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto">
-            Soluções Sustentáveis para Infraestrutura com Rentabilidade, Qualidade e Desenvolvimento Humano
+            Soluções Sustentáveis para Infraestrutura
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -553,13 +584,13 @@ const App = () => {
             <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-6 rounded-lg">
               <Mail className="w-12 h-12 mb-4 text-[#9CA856]" />
               <h3 className="text-lg font-bold mb-2">E-mail</h3>
-              <p>contato@grupofoxforest.com.br</p>
+              <p>comercial@foxsa.com.br</p>
             </div>
             
             <div className="flex flex-col items-center bg-white/10 backdrop-blur-sm p-6 rounded-lg">
               <Phone className="w-12 h-12 mb-4 text-[#9CA856]" />
               <h3 className="text-lg font-bold mb-2">Telefone</h3>
-              <p>(31) 3333-4444</p>
+              <p>(31) 3564-2560 | (31) 99916-6780</p>
             </div>
           </div>
         </div>
